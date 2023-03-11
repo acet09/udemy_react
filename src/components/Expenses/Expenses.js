@@ -1,7 +1,8 @@
 import React from 'react';
 import ExpenseItem from './ExpenseItem';
-import '../Expenses/ExpenseDate.css'
+import '../Expenses/Expenses.css'
 
+// 구분 함수 형식
 function Expense(props) {
   
   return(

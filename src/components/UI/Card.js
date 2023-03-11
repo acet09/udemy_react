@@ -1,7 +1,8 @@
 import React from 'react';
 import './Card.css';
 
-function Card(props) {
+// 최신 함수 형식
+const Card = (props) => {
   const classes = 'card ' + props.className;
   
   return (
