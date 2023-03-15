@@ -1,21 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ExpenseItem from './ExpenseItem';
 import '../Expenses/Expenses.css'
 import Card from '../UI/Card';
-import ExpensesFilter from '../NewExpense/ExpensesFilter';
+import ExpensesFilter from './ExpensesFilter';
 
 // 구분 함수 형식
 function Expense(props) {
-  const inValue = (elso) => {
-    console.log(elso)
-  }
+  const [filteredYear, setfilteredYear] = useState('2020');
+
+  const filterChangeHandler = selectedYear => {
+    setfilteredYear(selectedYear);
+    console.log(selectedYear)
+  };
 
   return (
     <div>
       <Card className='expenses'>
-        <ExpensesFilter dropValue = {inValue}/>
-      </Card>
-      <Card className='expenses'>
+        <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
         <ExpenseItem
           title={props.items[0].title}
           amount={props.items[0].amount}
