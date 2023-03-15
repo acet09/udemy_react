@@ -4,14 +4,16 @@ import '../Expenses/Expenses.css'
 import Card from '../UI/Card';
 import ExpensesFilter from '../NewExpense/ExpensesFilter';
 
-
 // 구분 함수 형식
 function Expense(props) {
+  const inValue = (elso) => {
+    console.log(elso)
+  }
 
   return (
     <div>
       <Card className='expenses'>
-        <ExpensesFilter />
+        <ExpensesFilter dropValue = {inValue}/>
       </Card>
       <Card className='expenses'>
         <ExpenseItem

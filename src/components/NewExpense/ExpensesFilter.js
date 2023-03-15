@@ -1,13 +1,14 @@
 import React from 'react';
-
 import './ExpensesFilter.css';
 
-const select = (event) => {
-  const value = event.target.value;
-  console.log(value);
-}
+const ExpensesFilter = (props) => {
 
-const ExpensesFilter = () => {
+  const select = (event) => {
+    const value = event.target.value;
+    // console.log(value);
+    props.dropValue(value);
+  }
+
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
