@@ -12,8 +12,10 @@ const NewExpense = (props) => {
   };
 
   return (
-    <div className="new-expense">
-      <ExpenseForm onSaveExpenseData={SaveExpenseData} />
+    <div>
+      <div className="new-expense">
+        <ExpenseForm onSaveExpenseData={SaveExpenseData} />
+      </div>
     </div>
   );
 };
